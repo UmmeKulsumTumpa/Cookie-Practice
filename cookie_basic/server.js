@@ -1,7 +1,7 @@
 const app = require("express")()
 
 app.get("/", (req, res) => {
-    res.setHeader("set-cookie", ["setfromserver=servercookie"]);
+     res.setHeader("set-cookie", ["setfromserver=servercookie1", "httponlycookiejscantaccess=1; httponly"]);
     res.sendFile(`${__dirname}/index.html`);
 });
 
